@@ -10,9 +10,9 @@ from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
 
 
-#################################################
+
 # Database Setup
-#################################################
+
 engine = create_engine("sqlite:///hawaii.sqlite")
 
 # reflect an existing database into a new model
@@ -27,15 +27,15 @@ Station = Base.classes.station
 # Create our session (link) from Python to the DB
 session = Session(engine)
 
-#################################################
+
 # Flask Setup
-#################################################
+
 app = Flask(__name__)
 
 
-#################################################
+
 # Flask Routes
-#################################################
+
 
 @app.route("/")
 def welcome():
